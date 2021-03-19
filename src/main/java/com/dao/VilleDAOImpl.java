@@ -22,20 +22,20 @@ public class VilleDAOImpl implements VilleDAO{
 	     ResultSet resultat = null;
 	     Statement statement2 = null;
 	     ResultSet resultat2 = null;
-	     List<String> res = new ArrayList<String>();
+	     List<String> resu = new ArrayList<String>();
 		try {
 			statement = connexion.createStatement();
             resultat = statement.executeQuery("SELECT v.Nom_commune FROM ville_france v;");
             while (resultat.next()) {
             	String v = new String(resultat.getString("Nom_Commune"));
             	statement2 = connexion.createStatement();
-                res.add(v);
+                resu.add(v);
             }	
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return res;
+		return resu;
 	}
 
 }
