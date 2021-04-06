@@ -61,7 +61,7 @@ public class VilleController {
 	public void CreerUneVille(@RequestBody Ville Ville) {
 		villeBLO.creerUneVille(Ville);
 	}
-	
+	//OK
 	@PutMapping(value = "/ville/{codeInsee}")
 	public void modifier(@RequestBody Ville ville, @PathVariable("codeInsee") String codeInsee) {
 		villeBLO.modifierUneVille(ville, codeInsee);
